@@ -1,4 +1,6 @@
 # ScriptGun
 
-ScriptGun is a small usefull software for those who like me are forgetful about syntax
-it can collect,organize, test, all your sctipts (adb, adb shell or fastboot  ).
+ScriptGun is a small usefull software for those who like me are forgetful about syntax switches , options paths and so on...
+ScriptGun can collect,organize, test, all your sctipts (adb, adb shell or fastboot or whatever), you can choose if to launch your script and see the results in the local embedded window or launch your script ina separate cmd shell.
+The little script database already present is just an example, in order to make you able to select, load and shoot ready made scripts against your device, but you can add your own scripts.
+Happy script-shooting !

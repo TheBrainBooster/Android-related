@@ -1,0 +1,23 @@
+adb devices|Lists connecte devices
+adb shell|Lanuch an adb shell instance
+adb shell dumpsys|Prints a full diagnostic system dump
+adb shell logcat -d|Prints a full system log dump to local window
+adb reboot recovery|Reboots the phone to the recovery environment
+adb shell mount -o rw,remount /system|remounts the system partition in rw mode
+adb shell mount -o ro,remount /system|remounts the system partition in ro mode
+adb reboot -p|Shutdown your phone
+adb shell echo 'mtp,adb' > /data/property/persist.sys.usb.config|Enable adb android until jellybean
+adb shell echo "persist.service.adb.enable=1" >> default.prop |enable adb persistent 1
+adb shell echo "persist.service.debuggable=1" >> default.prop|enable adb persistent 2
+adb shell echo "persist.sys.usb.config=mtp,adb" >> default.prop|enable adb persistent 3
+adb shell echo "persist.service.adb.enable=1" >> /system/build.prop|enable adb persistent 4
+adb shell echo "persist.service.debuggable=1" >> /system/build.prop|enable adb persistent 5
+adb shell echo "persist.sys.usb.config=mtp,adb" >> /system/build.prop|enable adb persistent 6
+adb tcpip 5555|sets the adb server listening on the 5555 port
+adb connect 192.168.0.34|connenct your device over IP (in this case 192.168.0.34) you can change it before to shoot the script 
+adb logcat -d -v thread *:E|Show error log filtered logcat
+adb shell dumpsys battery|Show battery info
+adb shell getprop|Show some phone properties
+adb install .\yourapp.apk|installs yourapp.apk onyour phone (change the app path and name)
+adb wait-for-device|waits for a deivce connection (launch invisible window)
+adb shell dumpsys connectivity|view connectiity info

@@ -20,4 +20,21 @@ adb shell dumpsys battery|Show battery info
 adb shell getprop|Show some phone properties
 adb install .\yourapp.apk|installs yourapp.apk onyour phone (change the app path and name)
 adb wait-for-device|waits for a deivce connection (launch invisible window)
-adb shell dumpsys connectivity|view connectiity info
+adb reboot bootloader|reboots the phone in fastboot mode
+fastboot flash recovery recovery.img|flashes a recovery image called recovery.img
+fastboot flash boot boot.img|flashes a boot image called boot.img
+fastboot flash cache cache.img|flashes a cache image called cache.img
+fastboot flash userdata userdata.img|flashes an userdata image called userata.img
+fastboot flash system system.img|flashes a system image called system.img
+fastboot reboot|exits fasboot and reboot the phone
+fastboot oem unlock|unlocks the bootloader
+adb shell df|get some info about device space and apps
+adb pull /data/app/ .\apps|save to a local folder all the content of your apps folder
+adb pull /system/vendor/app/ .\apps\VendorApps|save to a local folder all the content of your Vendor apps folder
+adb remount|remount local filesystems as rw
+adb backup -apk -shared -all -f .\ScriptGunBackup.ab|launch a full backup of your phone
+adb shell pm list packages -f|lists installed packages -detailed
+adb shell pm list packages|lists installed packages
+adb shell "pm list packages | cut -f 2 -d ":""
+adb shell input keyevent 26|toggle power button
+adb shell input keyevent 82|unlocks  the screen

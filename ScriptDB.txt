@@ -41,4 +41,5 @@ adb shell input keyevent 82|unlocks  the screen
 adb shell setprop persist.service.adb.enable 1|enable usb debug
 adb shell cat /proc/mounts|Info about the partitions
 adb pull /data/data/com.android.providers.settings|Pulls the folder with the android system settings DB (edit with an sqlite DBeditor)
-adb shell "cat /proc/mounts | grep /dev/block"|List partitions info with names
+adb shell "cat /proc/mounts  grep /dev/block"|deep info about partitions
+adb shell "getprop ro.product.model"|dumps the product model name
